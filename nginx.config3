@@ -1,3 +1,22 @@
+#配置web服务
+server	{
+	listen 8081;
+	root	/soft/code1;
+	index index.html;
+}
+server	{
+	listen 8082;
+	root	/soft/code2;
+	index index.html;
+}
+server	{
+	listen 8083;
+	root	/soft/code3;
+	index index.html;
+}
+
+
+#负载均衡
 upstream	node	{
 	server	你的IP:8081;
 	server	你的IP:8082;
